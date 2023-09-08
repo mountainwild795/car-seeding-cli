@@ -4,11 +4,6 @@ npm i commander
 npm i @types/comander -D
 tsc --init
 
-node dist/index.js books --count
-
-node dist/index.js seed
-
-
 
 {
 
@@ -33,3 +28,15 @@ node dist/index.js seed
   }
 
 }
+
+
+node dist/index.js books --count
+
+node dist/index.js seed
+
+mongosh:
+
+test> use carsdb
+switched to db carsdb
+carsdb> db.books.deleteMany({})
+{ acknowledged: true, deletedCount: 20 }

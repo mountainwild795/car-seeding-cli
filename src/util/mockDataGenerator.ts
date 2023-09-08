@@ -7,8 +7,8 @@ type Book = {
 };
 export const generateRandomBook = (): Book => {
   return {
-    make: faker.lorem.words(),
-    model: faker.person.fullName(),
+    make: faker.vehicle.manufacturer(),
+    model: faker.vehicle.model(),
     year: faker.number.int({ min: 2010, max: 2023 }).toString(),
   };
 };
